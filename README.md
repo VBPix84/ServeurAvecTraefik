@@ -15,6 +15,9 @@ Reflexions projet pour mon serveur en utilisant traefik
 
 Le serveur est sur une base Linux Debian et *tout est installé en containers docker* (avec docker-compose) géré par UI via Portainer.
 J'ai un nom de domaine enregitré avec dynDNS possible pour renvoyer vers les différents services.
+J'ai des soucis de permissions sur Linux pour une raison que je n'ai pas encore approfondi.
+
+Rien n'est "en prod", certaines choses sont plus embêtantes si je ne les aient plus mais rien n'est indispensable.
 
 ## Organisation de ma domotique
 
@@ -43,7 +46,7 @@ Ce qui n'est pas fait actuellement :
 - [ ] Accéder à NR de l'extérieur ?
 
 Actuellement, les containers sont dans un docker-compose en stack "vincent" - je ne sais pas pourquoi - et network: domotique (cf docker-compose_domotique.yaml)
-Les ports sont précisés dans le docker-compose
+Les ports sont précisés dans le docker-compose.
 
 ## Organisation du serveur Web
 
