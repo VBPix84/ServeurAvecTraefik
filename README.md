@@ -21,7 +21,7 @@ J'ai des soucis de permissions sur Linux pour une raison que je n'ai pas encore 
 
 Rien n'est "en prod", certaines choses sont plus embêtantes si je ne les aient plus mais rien n'est indispensable.
 
-## Organisation de ma domotique
+### Organisation de ma domotique
 
 J'utilise principalement Zigbee2mqtt et NodeRed. HA me sert uniquement de DashBoard
 
@@ -50,7 +50,7 @@ Ce qui n'est pas fait actuellement :
 Actuellement, les containers sont dans un docker-compose en stack "vincent" - je ne sais pas pourquoi - et network: domotique (cf docker-compose_domotique.yaml)
 Les ports sont précisés dans le docker-compose.
 
-## Organisation du serveur Web
+### Organisation du serveur Web
 
 Le serveur est composé d'un stack qui lance les containers suivants :
 
@@ -62,17 +62,19 @@ Le serveur est composé d'un stack qui lance les containers suivants :
 Actuellement, les containers sont dans un docker-compose en stack "webserver" et network: webserver (cf docker-compose_domotique.yaml)
 Les ports sont précisés dans le docker-compose
 
-## Moyen de dev
+### Moyen de dev
 
 Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des problèmes de sudo et de permissions d'accès...
 
-## Choix du matériel
+# Le Projet
+
+# Choix du matériel
 
 - J'ai une baie 12U 19 pouces profondeur 45cm (profondeur max environ 38cm)
 - Serveur Linux Débian via un PC 1U racké dans ma baie (Un serveur racké, c'est mon rêve : juste pour mon plaisir !)
 - Serveur actuel qui deviendrait un serveur de tests
 
-## Structure pour mener à bien le projet
+# Structure pour mener à bien le projet
 
 **Les fichiers présents dans ce repository représentent ce que j'aimerai faire** et non ma configuration actuelle, à voir s'il y a des erreurs ou autre, je prépare juste !
 
@@ -83,3 +85,9 @@ Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des pr
 - Un docker-compose par serveur de dev de sites web (Un docker-compose avec NginX, Mariadb et Php par site web)
 - Une base de donnée pour stocker ma base de donnée de mots de passe bitwarden.
 - Je pense également à supprimer Portainer pour travailler en ligne de code, c'est plus amusant :D
+
+# Principale Difficulté
+
+J'ai quelques caméras que j'aimerais pouvoir gérer de chez moi (NVR classiquement ou enregistrement avec détection de présence, etc... avec notification). je ne sais pas comment intégrer ce principe dans un serveur combiné ou dans un serveur à part.
+
+A voir la possibilité d'avoir un serveur NAS pour intégrer cette gestion ?
