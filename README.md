@@ -11,16 +11,21 @@ Reflexion projet pour mon serveur en utilisant traefik
 5. Stocker ma base de donnée de mot de passes bitwarden
 6. Pouvoir accéder à des services depuis l'extérieur en toute sécurité (reverse proxy)
 
-Le serveur est sur une base Linux Debian et tout est installé en container docker (avec docker-compose).
+Le serveur est sur une base Linux Debian et *tout est installé en containers docker* (avec docker-compose).
 
 ## Organisation de ma domotique
 
-- [ ] #739
-```mermaid
-flowchart TD
-    A[Start] --> B{Is it?}
-    B -- Yes --> C[OK]
-    C --> D[Rethink]
-    D --> C
-    B -- No ----> E[End]
-```
+J'utilise principalement Zigbee2mqtt et NodeRed. HA me sert uniquement de DashBoard
+
+- [X] Capteurs Zigbee appairés avec Zigbee2mqtt
+- [X] Zigbee2mqtt publie vers Mosquitto
+- [X] Home Assistant récupère des infos depuis MQTT
+- [X] Home Assistant me sert de dashboard
+- [X] NodeRed récupère des infos de Z2M (en direct), via MQTT ou via HA.
+- [X] NodeRed diffuse des fichiers mp3 dans les enceintes de la maisons via une palette Cast.
+- [X] NodeRed envoie des notifications via un bot telegram
+- [X] NodeRed recoit des infos depuis des conversations telegram grâce au bot
+
+Ce qui n'est pas fait actuellement :
+- [ ] Sauvegarde des données des capteurs (températures par ex).
+- [ ] Accéder au dashboard HA de l'extérieur
