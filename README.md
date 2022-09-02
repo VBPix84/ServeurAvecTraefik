@@ -17,7 +17,7 @@ Le serveur est sur une base Linux Debian et *tout est installé en containers do
 
 J'utilise principalement Zigbee2mqtt et NodeRed. HA me sert uniquement de DashBoard
 
-Liste des containers (stack "vincent" - je ne sais pas pourquoi - , network: domotique) : 
+Liste des containers :
 - NodeRed
 - Zigbee2mqtt
 - Home Assistant
@@ -35,5 +35,9 @@ Ce qui est fait actuellement :
 - [X] NodeRed recoit des infos depuis des conversations telegram grâce au bot
 
 Ce qui n'est pas fait actuellement :
-- [ ] Sauvegarde des données des capteurs (températures par ex).
+- [ ] Sauvegarde des données des capteurs (températures par ex)
 - [ ] Accéder au dashboard HA de l'extérieur
+- [ ] Accéder à NR de l'extérieur ?
+
+Actuellement, les containers sont dans un docker-compose en stack "vincent" - je ne sais pas pourquoi - et network: domotique (cf docker-compose_domotique.yaml)
+Les ports sont précisés dans le docker-compose
