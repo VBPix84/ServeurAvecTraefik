@@ -17,6 +17,14 @@ Le serveur est sur une base Linux Debian et *tout est installé en containers do
 
 J'utilise principalement Zigbee2mqtt et NodeRed. HA me sert uniquement de DashBoard
 
+Liste des containers (stack "vincent" - je ne sais pas pourquoi - , network: domotique) : 
+- NodeRed
+- Zigbee2mqtt
+- Home Assistant
+- Mosquitto
+- Mqtt-explorer (stack mqtt-explorer)
+
+Ce qui est fait actuellement :
 - [X] Capteurs Zigbee appairés avec Zigbee2mqtt
 - [X] Zigbee2mqtt publie vers Mosquitto
 - [X] Home Assistant récupère des infos depuis MQTT
