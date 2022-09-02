@@ -16,7 +16,7 @@ Le serveur est sur une base Linux Debian et tout est installé en container dock
 ## Organisation de ma domotique
 
 - [ ] #739
-
+```
 flowchart LR
   subgraph TOP
     direction TB
@@ -31,3 +31,4 @@ flowchart LR
   end
   A --> TOP --> B
   B1 --> B2
+```
