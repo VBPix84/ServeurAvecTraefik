@@ -92,7 +92,7 @@ Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des pr
 - Une base de donnée de sauvegarde des données de domotique (Un docker-compose avec NginX, Mariadb et Php pour l'affichage d'un site dashboard ?)
 - Un(des) serveur(s) de dev de sites web (Un docker-compose avec NginX, Mariadb et Php par site web)
 - Une base de donnée pour bitwarden.
-- Un container pour NVR (cf https://github.com/VBPix84/ServeurAvecTraefik#sujet-à-réflexion-totale--le-nvr-
+- Un container pour NVR (cf [Le sujet NVR...](https://github.com/VBPix84/ServeurAvecTraefik#sujet-à-réflexion-totale--le-nvr-) )
 - Je pense également à supprimer Portainer pour travailler en ligne de code, c'est plus amusant :D
 
 ### Sujet à réflexion totale : le NVR !
