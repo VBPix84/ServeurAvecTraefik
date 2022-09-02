@@ -6,12 +6,15 @@ Reflexion projet pour mon serveur en utilisant traefik
 
 1. Supporter ma domotique
 2. Sauvegarder (mariadb) des données des capteurs domotiques)
-3. Supporter un serveur Web NginX pour le stockage de documents accessible pour les services installés sur le serveur (ex: bibliothèques de tts en mp3 pour l'alarme)
+3. Supporter un serveur Web NginX pour le stockage de fichiers accessibles pour les services installés sur le serveur (ex: bibliothèques de tts en mp3 pour l'alarme)
 4. Supporter des serveurs de dev de sites web (Un docker-compose avec NginX, Mariadb et Php par site web)
 5. Stocker ma base de donnée de mot de passes bitwarden
 6. Pouvoir accéder à des services depuis l'extérieur en toute sécurité (reverse proxy)
 
-Le serveur est sur une base Linux Debian et *tout est installé en containers docker* (avec docker-compose).
+# Organisation actuelle
+
+Le serveur est sur une base Linux Debian et *tout est installé en containers docker* (avec docker-compose) géré par UI via Portainer.
+J'ai un nom de domaine enregitré avec dynDNS possible pour renvoyer vers les différents services.
 
 ## Organisation de ma domotique
 
@@ -41,3 +44,36 @@ Ce qui n'est pas fait actuellement :
 
 Actuellement, les containers sont dans un docker-compose en stack "vincent" - je ne sais pas pourquoi - et network: domotique (cf docker-compose_domotique.yaml)
 Les ports sont précisés dans le docker-compose
+
+## Organisation du serveur Web
+
+Le serveur est composé d'un stack qui lance les containers suivants :
+
+- NginX
+- Php
+- Mariadb
+- Adminer
+
+Actuellement, les containers sont dans un docker-compose en stack "webserver" et network: webserver (cf docker-compose_domotique.yaml)
+Les ports sont précisés dans le docker-compose
+
+## Moyen de dev
+
+Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des problèmes de sudo et de permissions d'accès...
+
+## Choix du matériel
+
+- J'ai une baie 12U 19 pouces profondeur 45cm (profondeur max environ 38cm)
+- Serveur Linux Débian via un PC 1U racké dans ma baie (Un serveur racké, c'est mon rêve : juste pour mon plaisir !)
+- Serveur actuel qui deviendrait un serveur de tests
+
+## Structure pour mener à bien le projet
+
+**Les fichiers présents dans ce repository représentent ce que j'aimerai faire** et non ma configuration actuelle, à voir s'il y a des erreurs ou autre, je prépare juste !
+
+- J'imagine installer un container soit **Traefik**, soit **NginX** en reverse proxy, qui sera le moyen d'accès vers tous les containers, que ce soit en local sur mon LAN ou depuis l'extérieur (sécurisation du système)
+    - L'accès aux services se faisant par sous domaine de mon domaine actuel (bitwarden.vb-connect.fr, ha.vb-connect.fr, etc... qui renverais tous vers le serveur et traefik utiliserais donc ces sous domaines pour diriger la requête.
+- Un serveur Web NginX pour le stockage de fichiers accessibles. Donc à priori juste une configuration html, il s'agit d'avoir un lien type http://domaine/fichier.mp3 pour les services installés sur le serveur (ex: bibliothèques de tts en mp3 pour l'alarme)
+- Un docker-compose pour la sauvegarde des données de domotique (Un docker-compose avec NginX, Mariadb et Php pour l'affichage d'un site dashboard)
+- Un docker-compose par serveur de dev de sites web (Un docker-compose avec NginX, Mariadb et Php par site web)
+- Une base de donnée pour stocker ma base de donnée de mots de passe bitwarden.
