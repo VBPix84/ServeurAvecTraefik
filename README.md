@@ -47,6 +47,8 @@ Ce qui n'est pas fait actuellement :
 - [ ] Accéder au dashboard HA de l'extérieur
 - [ ] Accéder à NR de l'extérieur ?
 
+> C'est donc principalement la sécurisation du système pour pouvoir l'exposer à internet qui oblige à reprendre l'organisation. Autant en profiter pour améliorer les choses !
+
 Actuellement, les containers sont dans un docker-compose en stack "vincent" - je ne sais pas pourquoi - et network: domotique (cf docker-compose_domotique.yaml)
 Les ports sont précisés dans le docker-compose.
 
