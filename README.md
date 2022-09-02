@@ -1,6 +1,6 @@
 # Serveur Avec Traefik
 
-Reflexion projet pour mon serveur en utilisant traefik
+Reflexions projet pour mon serveur en utilisant traefik
 
 # Objectifs
 
