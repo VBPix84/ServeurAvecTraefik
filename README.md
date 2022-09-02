@@ -78,6 +78,10 @@ Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des pr
 
 ![Schéma du projet géré par Traefik](Projet_Traefik.png)
 
+*Notes concernant le schéma:*
+*- Les sous-domaines sont intégrés à mon nom de domaine et renvoies tous sur mon serveur via DynDNS;*
+*- La partie "serveur de fichier" n'est actuellement pas prévue pour stocker des fichiers à modifier etc comme un NAS (J'utilise des services externes auj).*
+
 **Les fichiers présents dans ce repository représentent ce que j'aimerai faire** et non ma configuration actuelle, à voir s'il y a des erreurs ou autre, je prépare juste !
 
 - J'imagine installer un container soit **Traefik**, soit **NginX** en reverse proxy, qui sera le moyen d'accès vers tous les containers, que ce soit en local sur mon LAN ou depuis l'extérieur (sécurisation du système)
