@@ -79,22 +79,23 @@ Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des pr
 ![Schéma du projet géré par Traefik](Projet_Traefik.png)
 
 > Notes concernant le schéma:
-> Les sous-domaines sont intégrés à mon nom de domaine et renvoies tous sur mon serveur via DynDNS;
-> La partie "serveur de fichier" n'est actuellement pas prévue pour stocker des fichiers à modifier etc comme un NAS (J'utilise des services externes auj);
-> Le nombre de sites web hébergés n'est pas défini mais il ne s'agit que de sites web en dev;
-> La version prod serait mise sur de vraies serveurs avec de vraies informaticiens derrières ;)
+> Les sous-domaines sont intégrés à mon nom de domaine et renvoient tous sur mon serveur via DynDNS ;
+> La partie "serveur de fichier" n'est actuellement pas prévue pour stocker des fichiers à modifier etc comme un NAS (J'utilise des services externes auj) ;
+> Le nombre de sites web hébergés n'est pas défini mais il ne s'agit que de sites web en dev (2 ou 3 en simultanée) ;
+> La version prod serait mise sur de vrais serveurs avec de vraies informaticiens derrières ;)
 
 **Les fichiers présents dans ce repository représentent ce que j'aimerai faire** et non ma configuration actuelle, à voir s'il y a des erreurs ou autre, je prépare juste !
 
 - J'imagine installer un container soit **Traefik**, soit **NginX** en reverse proxy, qui sera le moyen d'accès vers tous les containers, que ce soit en local sur mon LAN ou depuis l'extérieur (sécurisation du système)
-    - L'accès aux services se faisant par sous domaine de mon domaine actuel (bitwarden.vb-connect.fr, ha.vb-connect.fr, etc... qui renverais tous vers le serveur et traefik utiliserais donc ces sous domaines pour diriger la requête.
-- Un serveur Web NginX pour le stockage de fichiers accessibles. Donc à priori juste une configuration html, il s'agit d'avoir un lien type http://domaine/fichier.mp3 pour les services installés sur le serveur (ex: bibliothèques de tts en mp3 pour l'alarme)
-- Un docker-compose pour la sauvegarde des données de domotique (Un docker-compose avec NginX, Mariadb et Php pour l'affichage d'un site dashboard)
-- Un docker-compose par serveur de dev de sites web (Un docker-compose avec NginX, Mariadb et Php par site web)
-- Une base de donnée pour stocker ma base de donnée de mots de passe bitwarden.
+    - L'accès aux services se faisant par sous domaine de mon domaine actuel qui renveraient tous vers le serveur et traefik utiliserait donc ces sous-domaines pour diriger la requête.
+- Un serveur Web NginX pour le stockage de fichiers. Donc à priori juste une configuration html, il s'agit d'avoir un lien type http://domaine/fichier.mp3 pour les services installés sur le serveur (ex: bibliothèques de tts en mp3 pour l'alarme)
+- Une base de donnée de sauvegarde des données de domotique (Un docker-compose avec NginX, Mariadb et Php pour l'affichage d'un site dashboard ?)
+- Un(des) serveur(s) de dev de sites web (Un docker-compose avec NginX, Mariadb et Php par site web)
+- Une base de donnée pour bitwarden.
+- Un container pour NVR (cf https://github.com/VBPix84/ServeurAvecTraefik#sujet-à-réflexion-totale--le-nvr-
 - Je pense également à supprimer Portainer pour travailler en ligne de code, c'est plus amusant :D
 
-### Principale Difficulté
+### Sujet à réflexion totale : le NVR !
 
 J'ai quelques caméras que j'aimerais pouvoir gérer de chez moi (NVR classiquement ou enregistrement avec détection de présence, etc... avec notification). je ne sais pas comment intégrer ce principe dans un serveur combiné ou dans un serveur à part.
 
