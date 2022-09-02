@@ -10,7 +10,8 @@ Reflexions projet pour mon serveur en utilisant traefik
 4. Supporter des serveurs de dev de sites web (Un docker-compose avec NginX, Mariadb et Php par site web)
 5. Stocker ma base de donnée de mot de passes bitwarden
 6. Pouvoir accéder à des services depuis l'extérieur en toute sécurité (reverse proxy)
-7. Pourquoi pas, selon les besoins matériels, difficulté, etc : Montage d'un VPN pour accéder à du stockage (idée à avoir en tête mais pas la plus importante, loin de là)
+7. Intégrer la vidéo surveillance des caméras de la maison (rec, detection....)
+8. Pourquoi pas, selon les besoins matériels, difficulté, etc : Montage d'un VPN pour accéder à du stockage (idée à avoir en tête mais pas la plus importante, loin de là)
 
 # Organisation actuelle
 
