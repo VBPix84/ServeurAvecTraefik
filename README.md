@@ -77,3 +77,4 @@ Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des pr
 - Un docker-compose pour la sauvegarde des données de domotique (Un docker-compose avec NginX, Mariadb et Php pour l'affichage d'un site dashboard)
 - Un docker-compose par serveur de dev de sites web (Un docker-compose avec NginX, Mariadb et Php par site web)
 - Une base de donnée pour stocker ma base de donnée de mots de passe bitwarden.
+- Je pense également à supprimer Portainer pour travailler en ligne de code, c'est plus amusant :D
