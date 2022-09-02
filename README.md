@@ -2,7 +2,7 @@
 
 Reflexion projet pour mon serveur en utilisant traefik
 
-## Objectif
+## Objectifs
 
 - Supporter ma domotique ;
 - Supporter un serveur Web NginX pour le stockage de documents accessible pour les services installés sur le serveur (ex: bibliothèques de tts en mp3 pour l'alarme)
