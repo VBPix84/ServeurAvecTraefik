@@ -78,7 +78,7 @@ Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des pr
 
 ![Schéma du projet géré par Traefik](Projet_Traefik.png)
 
-*Notes concernant le schéma: Les sous-domaines sont intégrés à mon nom de domaine et renvoies tous sur mon serveur via DynDNS; La partie "serveur de fichier" n'est actuellement pas prévue pour stocker des fichiers à modifier etc comme un NAS (J'utilise des services externes auj); Le nombre de sites web hébergés n'est pas défini mais il ne s'agit que de sites web en dev. La version prod serait mise sur de vraies serveurs avec de vraies informaticiens derrières ;) *
+*Notes concernant le schéma: Les sous-domaines sont intégrés à mon nom de domaine et renvoies tous sur mon serveur via DynDNS; La partie "serveur de fichier" n'est actuellement pas prévue pour stocker des fichiers à modifier etc comme un NAS (J'utilise des services externes auj); Le nombre de sites web hébergés n'est pas défini mais il ne s'agit que de sites web en dev. La version prod serait mise sur de vraies serveurs avec de vraies informaticiens derrières ;)*
 
 **Les fichiers présents dans ce repository représentent ce que j'aimerai faire** et non ma configuration actuelle, à voir s'il y a des erreurs ou autre, je prépare juste !
 
