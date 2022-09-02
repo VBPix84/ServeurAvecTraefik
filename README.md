@@ -68,13 +68,13 @@ Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des pr
 
 # Le Projet
 
-# Choix du matériel
+### Choix du matériel
 
 - J'ai une baie 12U 19 pouces profondeur 45cm (profondeur max environ 38cm)
 - Serveur Linux Débian via un PC 1U racké dans ma baie (Un serveur racké, c'est mon rêve : juste pour mon plaisir !)
 - Serveur actuel qui deviendrait un serveur de tests
 
-# Structure pour mener à bien le projet
+### Structure pour mener à bien le projet
 
 **Les fichiers présents dans ce repository représentent ce que j'aimerai faire** et non ma configuration actuelle, à voir s'il y a des erreurs ou autre, je prépare juste !
 
@@ -86,7 +86,7 @@ Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des pr
 - Une base de donnée pour stocker ma base de donnée de mots de passe bitwarden.
 - Je pense également à supprimer Portainer pour travailler en ligne de code, c'est plus amusant :D
 
-# Principale Difficulté
+### Principale Difficulté
 
 J'ai quelques caméras que j'aimerais pouvoir gérer de chez moi (NVR classiquement ou enregistrement avec détection de présence, etc... avec notification). je ne sais pas comment intégrer ce principe dans un serveur combiné ou dans un serveur à part.
 
