@@ -76,6 +76,8 @@ Utilisation de VSC pour se connecter en ssh sur le serveur - A résoudre, des pr
 
 ### Structure pour mener à bien le projet
 
+[What is this](/assets/images/Projet_Traefik.png)
+
 **Les fichiers présents dans ce repository représentent ce que j'aimerai faire** et non ma configuration actuelle, à voir s'il y a des erreurs ou autre, je prépare juste !
 
 - J'imagine installer un container soit **Traefik**, soit **NginX** en reverse proxy, qui sera le moyen d'accès vers tous les containers, que ce soit en local sur mon LAN ou depuis l'extérieur (sécurisation du système)
