@@ -1,4 +1,4 @@
-# Serveur Sécurité Multi-Objectifs
+# Serveur Sécurisé Multi-Objectifs
 
 Reflexions projet pour mon serveur en utilisant traefik
 
