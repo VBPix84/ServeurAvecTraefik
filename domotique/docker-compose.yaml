@@ -1,0 +1,76 @@
+version: '3'
+
+services:
+
+#
+# Container Mosquitto : Serveur MQTT
+#
+  mosquitto:
+    container_name: mosquitto
+    image: eclipse-mosquitto:latest
+#    ports: // Comment lier à Traefik ?
+#      - 1883:1883
+#      - 9001:9001
+    volumes:
+      - /home/vincent/mosquitto/config:/mosquitto/config
+      - /home/vincent/mosquitto/data:/mosquitto/data
+      - /home/vincent/mosquitto/log:/mosquitto/log
+    environment:
+      - TZ=Europe/Paris
+    networks:
+      - domotique
+    restart: unless-stopped
+
+#
+# Container Zigbee2MQTT : Réceptionne les devices Zigbee et les envoie dans Mosquitto.
+# Modifs à faire dans la config
+#
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt:latest
+#    ports:
+#      - 8080:8080
+    volumes:
+      - /home/vincent/zigbee2mqtt/data:/app/data
+      - /run/udev:/run/udev:ro
+    environment:
+      - TZ=Europe/Paris
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0 # Adresse via la ligne: sudo ls -l /dev/serial/by-id
+    networks:
+      - domotique
+    restart: unless-stopped
+
+  homeassistant:
+    container_name: homeassistant
+    image: "ghcr.io/home-assistant/home-assistant:stable"
+#    ports:
+#      - 8123:8123
+    volumes:
+      - /home/vincent/homeassistant/config:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /var/run/docker.sock:/var/run/docker.sock # pour avoir les stats via HCS et Monitor_Docker
+    environment:
+      - TZ=Europe/Paris
+    networks:
+      - domotique
+    restart: unless-stopped
+    privileged: true
+
+  node-red:
+    container_name: nodered
+    image: nodered/node-red:latest
+    user: 1000:1000
+#    ports:
+#      - 1880:1880
+    volumes:
+      - /home/vincent/nodered/data:/data
+    environment:
+      - TZ=Europe/Paris
+    networks:
+      - domotique
+    restart: unless-stopped  
+
+
+networks:
+  domotique:
